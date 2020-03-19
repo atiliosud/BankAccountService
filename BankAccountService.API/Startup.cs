@@ -42,8 +42,7 @@ namespace BankAccountService.API
 
             services.AddScoped<BankServiceContext, BankServiceContext>();
 
-            services.AddTransient<ICheckingAccountRepository, CheckingAccountRepository>();
-            services.AddTransient<ISavingsAccountRepository, SavingsAccountRepository>();
+            services.AddTransient<IBankAccountRepository, BankAccountRepository>();
 
             services.AddControllers().AddNewtonsoftJson(options =>
             {

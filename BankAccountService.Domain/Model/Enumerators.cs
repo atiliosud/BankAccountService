@@ -4,9 +4,22 @@ using System.Text;
 
 namespace BankAccountService.Domain.Model
 {
-    public enum FactoryObject
+    public enum AccountType
     {
         SavingAccount,
         CheckingAccount
+    }
+
+    public enum TransactionType
+    {
+        CCtoCC,
+        CCtoSV
+    }
+
+    public enum OperationType
+    {
+        Withdraw,
+        Deposit,
+        Transfer
     }
 }

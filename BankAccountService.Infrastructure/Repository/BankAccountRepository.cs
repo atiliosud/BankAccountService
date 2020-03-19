@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using BankAccountService.Domain.Interface;
 using BankAccountService.Domain.Model;
 using BankAccountService.Domain.Model.Repository;
 using BankAccountService.Infrastructure.Context;
 
 namespace BankAccountService.Infrastructure.Repository
 {
-    public class CheckingAccountRepository : Repository<CheckingAccount>, ICheckingAccountRepository
+    public class BankAccountRepository : Repository<BankAccount>, IBankAccountRepository
     {
-        public CheckingAccountRepository(BankServiceContext context) : base(context)
+        public BankAccountRepository(BankServiceContext context) : base(context)
         {
 
         }

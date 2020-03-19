@@ -7,9 +7,9 @@ using BankAccountService.Infrastructure.Context;
 
 namespace BankAccountService.Infrastructure.Repository
 {
-    public class SavingsAccountRepository : Repository<SavingsAccount>, ISavingsAccountRepository
+    public class TransactionRepository : Repository<Transaction>, ITransactionRepository
     {
-        public SavingsAccountRepository(BankServiceContext context) : base(context)
+        public TransactionRepository(BankServiceContext context) : base(context)
         {
 
         }

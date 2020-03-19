@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BankAccountService.Domain.Model.Repository
 {
-    public interface ICheckingAccountRepository : IRepository<CheckingAccount>
+    public interface IBankAccountRepository : IRepository<BankAccount>
     {
     }
 }

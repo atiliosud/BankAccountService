@@ -10,8 +10,7 @@ namespace BankAccountService.Infrastructure.Context
         : base(options)
         {
         }
-
-        public DbSet<CheckingAccount> CheckingAccount { get; set; }
-        public DbSet<SavingsAccount> SavingsAccount { get; set; }
+        public DbSet<BankAccount> BankAccount { get; set; }
+        public DbSet<Transaction> Transaction { get; set; }
     }
 }

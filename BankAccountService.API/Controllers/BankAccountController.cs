@@ -15,10 +15,10 @@ namespace BankAccountService.API.Controllers
     [ApiVersion("1.0")]
     [Route("api/v{version:apiVersion}/[controller]")]
     [Produces("application/json")]
-    public class SavingsAccountController : Controller
+    public class BankAccountController : Controller
     {
         [HttpGet]
-        public ActionResult<List<SavingsAccount>> Get([FromServices] ISavingsAccountRepository repository)
+        public ActionResult<List<BankAccount>> Get([FromServices] IBankAccountRepository repository)
         {
             try
             {
@@ -31,11 +31,11 @@ namespace BankAccountService.API.Controllers
         }
 
         [HttpGet("{id:int}")]
-        public IActionResult Get([FromServices] ISavingsAccountRepository repository, int id)
+        public IActionResult Get([FromServices] IBankAccountRepository repository, int id)
         {
             try
             {
-                SavingsAccount SavingsAccount = repository.Get().AsNoTracking().FirstOrDefault(x => x.Id == id);
+                BankAccount BankAccount = repository.Get().Include(x=>x.Transactions).AsNoTracking().FirstOrDefault(x => x.Id == id);
                 if (User == null)
                     return NotFound(new { message = "Conta inválida" });
                 return Ok(User);
@@ -47,9 +47,9 @@ namespace BankAccountService.API.Controllers
         }
 
         [HttpPost]
-        public ActionResult<SavingsAccount> Create(
-            [FromServices] ISavingsAccountRepository repository,
-            [FromBody]SavingsAccount model)
+        public ActionResult<BankAccount> Create(
+            [FromServices] IBankAccountRepository repository,
+            [FromBody]BankAccount model)
         {
             try
             {
@@ -67,9 +67,9 @@ namespace BankAccountService.API.Controllers
         }
 
         [HttpPut]
-        public ActionResult<SavingsAccount> Update(
-            [FromServices] ISavingsAccountRepository repository,
-            [FromBody]SavingsAccount model)
+        public ActionResult<BankAccount> Update(
+            [FromServices] IBankAccountRepository repository,
+            [FromBody]BankAccount model)
         {
             try
             {
@@ -85,12 +85,12 @@ namespace BankAccountService.API.Controllers
         }
 
         [HttpDelete("{id:int}")]
-        public ActionResult<SavingsAccount> Delete(
-          [FromServices] ISavingsAccountRepository repository, int id)
+        public ActionResult<BankAccount> Delete(
+          [FromServices] IBankAccountRepository repository, int id)
         {
             try
             {
-                SavingsAccount ca = repository.Get().AsNoTracking().FirstOrDefault(x => x.Id == id);
+                BankAccount ca = repository.Get().AsNoTracking().FirstOrDefault(x => x.Id == id);
                 if (User == null)
                 {
                     return NotFound(new { message = "Conta inválida" });
