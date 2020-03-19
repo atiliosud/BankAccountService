@@ -13,6 +13,7 @@ namespace BankAccountService.Domain.Model
         public string Number { get; set; }
         public string Owner { get; set; }
         public decimal Balance { get; set; }
+        public DateTime Date { get; set; }
        
         public List<Transaction> Transactions = new List<Transaction>();
 
@@ -40,7 +41,7 @@ namespace BankAccountService.Domain.Model
             }
         }
 
-        public void MakeDeposit(decimal amount, DateTime date)
+        public void MakeDeposit(decimal amount)
         {
             if (amount <= 0)
             {
@@ -61,6 +62,20 @@ namespace BankAccountService.Domain.Model
             }
             this.Balance -= amount;
             destination.Balance += amount;
+        }
+
+
+        public bool Validate(decimal amount)
+        {
+            if (this.Balance <= 0)
+            {
+                return false;
+            }
+            if (this.Balance - amount < 0)
+            {
+                return false;
+            }
+            return true;
         }
     }
 }
