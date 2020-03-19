@@ -5,11 +5,13 @@ VisualStudioVersion = 16.0.29911.84
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BankAccountService", "BankAccountService", "{97D8F1CB-A5AC-4123-821D-D20DB4FB3E2A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccountService.Domain", "BankAccountService.Domain\BankAccountService.Domain.csproj", "{CE6E7BC8-5ED3-44CA-B795-C28A511578F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankAccountService.Domain", "BankAccountService.Domain\BankAccountService.Domain.csproj", "{CE6E7BC8-5ED3-44CA-B795-C28A511578F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccountService.Infrastructure", "BankAccountService.Infrastructure\BankAccountService.Infrastructure.csproj", "{1B4BA8AE-6929-4234-AEE8-EEE60D35D605}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankAccountService.Infrastructure", "BankAccountService.Infrastructure\BankAccountService.Infrastructure.csproj", "{1B4BA8AE-6929-4234-AEE8-EEE60D35D605}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccountService.API", "BankAccountService.API\BankAccountService.API.csproj", "{BB9210BA-6DF8-4D37-AEC6-A853FA85C300}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankAccountService.API", "BankAccountService.API\BankAccountService.API.csproj", "{BB9210BA-6DF8-4D37-AEC6-A853FA85C300}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccountService.Tests", "BankAccountService.Tests\BankAccountService.Tests.csproj", "{2966BE60-F81A-44A1-AE18-D0A0FD37B3B0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +31,10 @@ Global
 		{BB9210BA-6DF8-4D37-AEC6-A853FA85C300}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB9210BA-6DF8-4D37-AEC6-A853FA85C300}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB9210BA-6DF8-4D37-AEC6-A853FA85C300}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2966BE60-F81A-44A1-AE18-D0A0FD37B3B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2966BE60-F81A-44A1-AE18-D0A0FD37B3B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2966BE60-F81A-44A1-AE18-D0A0FD37B3B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2966BE60-F81A-44A1-AE18-D0A0FD37B3B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -37,6 +43,7 @@ Global
 		{CE6E7BC8-5ED3-44CA-B795-C28A511578F8} = {97D8F1CB-A5AC-4123-821D-D20DB4FB3E2A}
 		{1B4BA8AE-6929-4234-AEE8-EEE60D35D605} = {97D8F1CB-A5AC-4123-821D-D20DB4FB3E2A}
 		{BB9210BA-6DF8-4D37-AEC6-A853FA85C300} = {97D8F1CB-A5AC-4123-821D-D20DB4FB3E2A}
+		{2966BE60-F81A-44A1-AE18-D0A0FD37B3B0} = {97D8F1CB-A5AC-4123-821D-D20DB4FB3E2A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7C49C14B-0963-4437-8F93-A6C4477DA656}
